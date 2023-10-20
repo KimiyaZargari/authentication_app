@@ -1,6 +1,9 @@
+import 'package:authentication_app/injection.dart';
 import 'package:flutter/material.dart';
+import 'package:injectable/injectable.dart';
 
 void main() {
+  configureDependencies();
   runApp(const MyApp());
 }
 
