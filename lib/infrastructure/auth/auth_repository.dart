@@ -5,9 +5,10 @@ import 'package:google_sign_in/google_sign_in.dart';
 import 'package:authentication_app/domain/auth/auth_failure.dart';
 import 'package:authentication_app/domain/auth/credentials.dart';
 import 'package:authentication_app/domain/auth/i_auth_repository.dart';
+import 'package:injectable/injectable.dart';
 
 
-
+@lazySingleton
 class AuthRepository implements IAuthRepository {
   final FirebaseAuth _firebaseAuth;
   final GoogleSignIn _googleSignIn;
