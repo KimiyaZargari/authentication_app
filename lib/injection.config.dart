@@ -8,10 +8,10 @@
 // coverage:ignore-file
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
-import 'package:authentication_app/application/auth/login_bloc.dart' as _i5;
-import 'package:authentication_app/domain/auth/i_auth_repository.dart' as _i6;
+import 'package:authentication_app/application/auth/login_bloc.dart' as _i7;
+import 'package:authentication_app/domain/auth/i_auth_repository.dart' as _i5;
 import 'package:authentication_app/infrastructure/auth/auth_repository.dart'
-    as _i7;
+    as _i6;
 import 'package:authentication_app/infrastructure/core/firebase_injectable_module.dart'
     as _i8;
 import 'package:firebase_auth/firebase_auth.dart' as _i3;
@@ -35,12 +35,11 @@ extension GetItInjectableX on _i1.GetIt {
         () => firebaseInjectableModule.firebaseAuth);
     gh.lazySingleton<_i4.GoogleSignIn>(
         () => firebaseInjectableModule.googleSignIn);
-    gh.factory<_i5.SignInFormBloc>(
-        () => _i5.SignInFormBloc(gh<_i6.IAuthRepository>()));
-    gh.lazySingleton<_i7.AuthRepository>(() => _i7.AuthRepository(
+    gh.lazySingleton<_i5.IAuthRepository>(() => _i6.AuthRepository(
           gh<_i3.FirebaseAuth>(),
           gh<_i4.GoogleSignIn>(),
         ));
+    gh.factory<_i7.LoginBloc>(() => _i7.LoginBloc(gh<_i5.IAuthRepository>()));
     return this;
   }
 }

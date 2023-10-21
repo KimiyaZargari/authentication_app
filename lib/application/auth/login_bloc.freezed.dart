@@ -24,6 +24,7 @@ mixin _$LoginEvent {
     required TResult Function() signInWithEmailAndPasswordPressed,
     required TResult Function() signInWithGooglePressed,
     required TResult Function() startAutoValidate,
+    required TResult Function() switchUserType,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -34,6 +35,7 @@ mixin _$LoginEvent {
     TResult? Function()? signInWithEmailAndPasswordPressed,
     TResult? Function()? signInWithGooglePressed,
     TResult? Function()? startAutoValidate,
+    TResult? Function()? switchUserType,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -44,6 +46,7 @@ mixin _$LoginEvent {
     TResult Function()? signInWithEmailAndPasswordPressed,
     TResult Function()? signInWithGooglePressed,
     TResult Function()? startAutoValidate,
+    TResult Function()? switchUserType,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -58,6 +61,7 @@ mixin _$LoginEvent {
     required TResult Function(SignInWithGooglePressed value)
         signInWithGooglePressed,
     required TResult Function(StartAutoValidate value) startAutoValidate,
+    required TResult Function(SwitchUserType value) switchUserType,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -70,6 +74,7 @@ mixin _$LoginEvent {
         signInWithEmailAndPasswordPressed,
     TResult? Function(SignInWithGooglePressed value)? signInWithGooglePressed,
     TResult? Function(StartAutoValidate value)? startAutoValidate,
+    TResult? Function(SwitchUserType value)? switchUserType,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -82,6 +87,7 @@ mixin _$LoginEvent {
         signInWithEmailAndPasswordPressed,
     TResult Function(SignInWithGooglePressed value)? signInWithGooglePressed,
     TResult Function(StartAutoValidate value)? startAutoValidate,
+    TResult Function(SwitchUserType value)? switchUserType,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -184,6 +190,7 @@ class _$EmailChangedImpl with DiagnosticableTreeMixin implements EmailChanged {
     required TResult Function() signInWithEmailAndPasswordPressed,
     required TResult Function() signInWithGooglePressed,
     required TResult Function() startAutoValidate,
+    required TResult Function() switchUserType,
   }) {
     return emailChanged(emailStr);
   }
@@ -197,6 +204,7 @@ class _$EmailChangedImpl with DiagnosticableTreeMixin implements EmailChanged {
     TResult? Function()? signInWithEmailAndPasswordPressed,
     TResult? Function()? signInWithGooglePressed,
     TResult? Function()? startAutoValidate,
+    TResult? Function()? switchUserType,
   }) {
     return emailChanged?.call(emailStr);
   }
@@ -210,6 +218,7 @@ class _$EmailChangedImpl with DiagnosticableTreeMixin implements EmailChanged {
     TResult Function()? signInWithEmailAndPasswordPressed,
     TResult Function()? signInWithGooglePressed,
     TResult Function()? startAutoValidate,
+    TResult Function()? switchUserType,
     required TResult orElse(),
   }) {
     if (emailChanged != null) {
@@ -230,6 +239,7 @@ class _$EmailChangedImpl with DiagnosticableTreeMixin implements EmailChanged {
     required TResult Function(SignInWithGooglePressed value)
         signInWithGooglePressed,
     required TResult Function(StartAutoValidate value) startAutoValidate,
+    required TResult Function(SwitchUserType value) switchUserType,
   }) {
     return emailChanged(this);
   }
@@ -245,6 +255,7 @@ class _$EmailChangedImpl with DiagnosticableTreeMixin implements EmailChanged {
         signInWithEmailAndPasswordPressed,
     TResult? Function(SignInWithGooglePressed value)? signInWithGooglePressed,
     TResult? Function(StartAutoValidate value)? startAutoValidate,
+    TResult? Function(SwitchUserType value)? switchUserType,
   }) {
     return emailChanged?.call(this);
   }
@@ -260,6 +271,7 @@ class _$EmailChangedImpl with DiagnosticableTreeMixin implements EmailChanged {
         signInWithEmailAndPasswordPressed,
     TResult Function(SignInWithGooglePressed value)? signInWithGooglePressed,
     TResult Function(StartAutoValidate value)? startAutoValidate,
+    TResult Function(SwitchUserType value)? switchUserType,
     required TResult orElse(),
   }) {
     if (emailChanged != null) {
@@ -360,6 +372,7 @@ class _$PasswordChangedImpl
     required TResult Function() signInWithEmailAndPasswordPressed,
     required TResult Function() signInWithGooglePressed,
     required TResult Function() startAutoValidate,
+    required TResult Function() switchUserType,
   }) {
     return passwordChanged(passwordStr);
   }
@@ -373,6 +386,7 @@ class _$PasswordChangedImpl
     TResult? Function()? signInWithEmailAndPasswordPressed,
     TResult? Function()? signInWithGooglePressed,
     TResult? Function()? startAutoValidate,
+    TResult? Function()? switchUserType,
   }) {
     return passwordChanged?.call(passwordStr);
   }
@@ -386,6 +400,7 @@ class _$PasswordChangedImpl
     TResult Function()? signInWithEmailAndPasswordPressed,
     TResult Function()? signInWithGooglePressed,
     TResult Function()? startAutoValidate,
+    TResult Function()? switchUserType,
     required TResult orElse(),
   }) {
     if (passwordChanged != null) {
@@ -406,6 +421,7 @@ class _$PasswordChangedImpl
     required TResult Function(SignInWithGooglePressed value)
         signInWithGooglePressed,
     required TResult Function(StartAutoValidate value) startAutoValidate,
+    required TResult Function(SwitchUserType value) switchUserType,
   }) {
     return passwordChanged(this);
   }
@@ -421,6 +437,7 @@ class _$PasswordChangedImpl
         signInWithEmailAndPasswordPressed,
     TResult? Function(SignInWithGooglePressed value)? signInWithGooglePressed,
     TResult? Function(StartAutoValidate value)? startAutoValidate,
+    TResult? Function(SwitchUserType value)? switchUserType,
   }) {
     return passwordChanged?.call(this);
   }
@@ -436,6 +453,7 @@ class _$PasswordChangedImpl
         signInWithEmailAndPasswordPressed,
     TResult Function(SignInWithGooglePressed value)? signInWithGooglePressed,
     TResult Function(StartAutoValidate value)? startAutoValidate,
+    TResult Function(SwitchUserType value)? switchUserType,
     required TResult orElse(),
   }) {
     if (passwordChanged != null) {
@@ -512,6 +530,7 @@ class _$RegisterWithEmailAndPasswordPressedImpl
     required TResult Function() signInWithEmailAndPasswordPressed,
     required TResult Function() signInWithGooglePressed,
     required TResult Function() startAutoValidate,
+    required TResult Function() switchUserType,
   }) {
     return registerWithEmailAndPasswordPressed();
   }
@@ -525,6 +544,7 @@ class _$RegisterWithEmailAndPasswordPressedImpl
     TResult? Function()? signInWithEmailAndPasswordPressed,
     TResult? Function()? signInWithGooglePressed,
     TResult? Function()? startAutoValidate,
+    TResult? Function()? switchUserType,
   }) {
     return registerWithEmailAndPasswordPressed?.call();
   }
@@ -538,6 +558,7 @@ class _$RegisterWithEmailAndPasswordPressedImpl
     TResult Function()? signInWithEmailAndPasswordPressed,
     TResult Function()? signInWithGooglePressed,
     TResult Function()? startAutoValidate,
+    TResult Function()? switchUserType,
     required TResult orElse(),
   }) {
     if (registerWithEmailAndPasswordPressed != null) {
@@ -558,6 +579,7 @@ class _$RegisterWithEmailAndPasswordPressedImpl
     required TResult Function(SignInWithGooglePressed value)
         signInWithGooglePressed,
     required TResult Function(StartAutoValidate value) startAutoValidate,
+    required TResult Function(SwitchUserType value) switchUserType,
   }) {
     return registerWithEmailAndPasswordPressed(this);
   }
@@ -573,6 +595,7 @@ class _$RegisterWithEmailAndPasswordPressedImpl
         signInWithEmailAndPasswordPressed,
     TResult? Function(SignInWithGooglePressed value)? signInWithGooglePressed,
     TResult? Function(StartAutoValidate value)? startAutoValidate,
+    TResult? Function(SwitchUserType value)? switchUserType,
   }) {
     return registerWithEmailAndPasswordPressed?.call(this);
   }
@@ -588,6 +611,7 @@ class _$RegisterWithEmailAndPasswordPressedImpl
         signInWithEmailAndPasswordPressed,
     TResult Function(SignInWithGooglePressed value)? signInWithGooglePressed,
     TResult Function(StartAutoValidate value)? startAutoValidate,
+    TResult Function(SwitchUserType value)? switchUserType,
     required TResult orElse(),
   }) {
     if (registerWithEmailAndPasswordPressed != null) {
@@ -659,6 +683,7 @@ class _$SignInWithEmailAndPasswordPressedImpl
     required TResult Function() signInWithEmailAndPasswordPressed,
     required TResult Function() signInWithGooglePressed,
     required TResult Function() startAutoValidate,
+    required TResult Function() switchUserType,
   }) {
     return signInWithEmailAndPasswordPressed();
   }
@@ -672,6 +697,7 @@ class _$SignInWithEmailAndPasswordPressedImpl
     TResult? Function()? signInWithEmailAndPasswordPressed,
     TResult? Function()? signInWithGooglePressed,
     TResult? Function()? startAutoValidate,
+    TResult? Function()? switchUserType,
   }) {
     return signInWithEmailAndPasswordPressed?.call();
   }
@@ -685,6 +711,7 @@ class _$SignInWithEmailAndPasswordPressedImpl
     TResult Function()? signInWithEmailAndPasswordPressed,
     TResult Function()? signInWithGooglePressed,
     TResult Function()? startAutoValidate,
+    TResult Function()? switchUserType,
     required TResult orElse(),
   }) {
     if (signInWithEmailAndPasswordPressed != null) {
@@ -705,6 +732,7 @@ class _$SignInWithEmailAndPasswordPressedImpl
     required TResult Function(SignInWithGooglePressed value)
         signInWithGooglePressed,
     required TResult Function(StartAutoValidate value) startAutoValidate,
+    required TResult Function(SwitchUserType value) switchUserType,
   }) {
     return signInWithEmailAndPasswordPressed(this);
   }
@@ -720,6 +748,7 @@ class _$SignInWithEmailAndPasswordPressedImpl
         signInWithEmailAndPasswordPressed,
     TResult? Function(SignInWithGooglePressed value)? signInWithGooglePressed,
     TResult? Function(StartAutoValidate value)? startAutoValidate,
+    TResult? Function(SwitchUserType value)? switchUserType,
   }) {
     return signInWithEmailAndPasswordPressed?.call(this);
   }
@@ -735,6 +764,7 @@ class _$SignInWithEmailAndPasswordPressedImpl
         signInWithEmailAndPasswordPressed,
     TResult Function(SignInWithGooglePressed value)? signInWithGooglePressed,
     TResult Function(StartAutoValidate value)? startAutoValidate,
+    TResult Function(SwitchUserType value)? switchUserType,
     required TResult orElse(),
   }) {
     if (signInWithEmailAndPasswordPressed != null) {
@@ -805,6 +835,7 @@ class _$SignInWithGooglePressedImpl
     required TResult Function() signInWithEmailAndPasswordPressed,
     required TResult Function() signInWithGooglePressed,
     required TResult Function() startAutoValidate,
+    required TResult Function() switchUserType,
   }) {
     return signInWithGooglePressed();
   }
@@ -818,6 +849,7 @@ class _$SignInWithGooglePressedImpl
     TResult? Function()? signInWithEmailAndPasswordPressed,
     TResult? Function()? signInWithGooglePressed,
     TResult? Function()? startAutoValidate,
+    TResult? Function()? switchUserType,
   }) {
     return signInWithGooglePressed?.call();
   }
@@ -831,6 +863,7 @@ class _$SignInWithGooglePressedImpl
     TResult Function()? signInWithEmailAndPasswordPressed,
     TResult Function()? signInWithGooglePressed,
     TResult Function()? startAutoValidate,
+    TResult Function()? switchUserType,
     required TResult orElse(),
   }) {
     if (signInWithGooglePressed != null) {
@@ -851,6 +884,7 @@ class _$SignInWithGooglePressedImpl
     required TResult Function(SignInWithGooglePressed value)
         signInWithGooglePressed,
     required TResult Function(StartAutoValidate value) startAutoValidate,
+    required TResult Function(SwitchUserType value) switchUserType,
   }) {
     return signInWithGooglePressed(this);
   }
@@ -866,6 +900,7 @@ class _$SignInWithGooglePressedImpl
         signInWithEmailAndPasswordPressed,
     TResult? Function(SignInWithGooglePressed value)? signInWithGooglePressed,
     TResult? Function(StartAutoValidate value)? startAutoValidate,
+    TResult? Function(SwitchUserType value)? switchUserType,
   }) {
     return signInWithGooglePressed?.call(this);
   }
@@ -881,6 +916,7 @@ class _$SignInWithGooglePressedImpl
         signInWithEmailAndPasswordPressed,
     TResult Function(SignInWithGooglePressed value)? signInWithGooglePressed,
     TResult Function(StartAutoValidate value)? startAutoValidate,
+    TResult Function(SwitchUserType value)? switchUserType,
     required TResult orElse(),
   }) {
     if (signInWithGooglePressed != null) {
@@ -946,6 +982,7 @@ class _$StartAutoValidateImpl
     required TResult Function() signInWithEmailAndPasswordPressed,
     required TResult Function() signInWithGooglePressed,
     required TResult Function() startAutoValidate,
+    required TResult Function() switchUserType,
   }) {
     return startAutoValidate();
   }
@@ -959,6 +996,7 @@ class _$StartAutoValidateImpl
     TResult? Function()? signInWithEmailAndPasswordPressed,
     TResult? Function()? signInWithGooglePressed,
     TResult? Function()? startAutoValidate,
+    TResult? Function()? switchUserType,
   }) {
     return startAutoValidate?.call();
   }
@@ -972,6 +1010,7 @@ class _$StartAutoValidateImpl
     TResult Function()? signInWithEmailAndPasswordPressed,
     TResult Function()? signInWithGooglePressed,
     TResult Function()? startAutoValidate,
+    TResult Function()? switchUserType,
     required TResult orElse(),
   }) {
     if (startAutoValidate != null) {
@@ -992,6 +1031,7 @@ class _$StartAutoValidateImpl
     required TResult Function(SignInWithGooglePressed value)
         signInWithGooglePressed,
     required TResult Function(StartAutoValidate value) startAutoValidate,
+    required TResult Function(SwitchUserType value) switchUserType,
   }) {
     return startAutoValidate(this);
   }
@@ -1007,6 +1047,7 @@ class _$StartAutoValidateImpl
         signInWithEmailAndPasswordPressed,
     TResult? Function(SignInWithGooglePressed value)? signInWithGooglePressed,
     TResult? Function(StartAutoValidate value)? startAutoValidate,
+    TResult? Function(SwitchUserType value)? switchUserType,
   }) {
     return startAutoValidate?.call(this);
   }
@@ -1022,6 +1063,7 @@ class _$StartAutoValidateImpl
         signInWithEmailAndPasswordPressed,
     TResult Function(SignInWithGooglePressed value)? signInWithGooglePressed,
     TResult Function(StartAutoValidate value)? startAutoValidate,
+    TResult Function(SwitchUserType value)? switchUserType,
     required TResult orElse(),
   }) {
     if (startAutoValidate != null) {
@@ -1036,6 +1078,153 @@ abstract class StartAutoValidate implements LoginEvent {
 }
 
 /// @nodoc
+abstract class _$$SwitchUserTypeImplCopyWith<$Res> {
+  factory _$$SwitchUserTypeImplCopyWith(_$SwitchUserTypeImpl value,
+          $Res Function(_$SwitchUserTypeImpl) then) =
+      __$$SwitchUserTypeImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$SwitchUserTypeImplCopyWithImpl<$Res>
+    extends _$LoginEventCopyWithImpl<$Res, _$SwitchUserTypeImpl>
+    implements _$$SwitchUserTypeImplCopyWith<$Res> {
+  __$$SwitchUserTypeImplCopyWithImpl(
+      _$SwitchUserTypeImpl _value, $Res Function(_$SwitchUserTypeImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$SwitchUserTypeImpl
+    with DiagnosticableTreeMixin
+    implements SwitchUserType {
+  const _$SwitchUserTypeImpl();
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'LoginEvent.switchUserType()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties.add(DiagnosticsProperty('type', 'LoginEvent.switchUserType'));
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$SwitchUserTypeImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String emailStr) emailChanged,
+    required TResult Function(String passwordStr) passwordChanged,
+    required TResult Function() registerWithEmailAndPasswordPressed,
+    required TResult Function() signInWithEmailAndPasswordPressed,
+    required TResult Function() signInWithGooglePressed,
+    required TResult Function() startAutoValidate,
+    required TResult Function() switchUserType,
+  }) {
+    return switchUserType();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String emailStr)? emailChanged,
+    TResult? Function(String passwordStr)? passwordChanged,
+    TResult? Function()? registerWithEmailAndPasswordPressed,
+    TResult? Function()? signInWithEmailAndPasswordPressed,
+    TResult? Function()? signInWithGooglePressed,
+    TResult? Function()? startAutoValidate,
+    TResult? Function()? switchUserType,
+  }) {
+    return switchUserType?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String emailStr)? emailChanged,
+    TResult Function(String passwordStr)? passwordChanged,
+    TResult Function()? registerWithEmailAndPasswordPressed,
+    TResult Function()? signInWithEmailAndPasswordPressed,
+    TResult Function()? signInWithGooglePressed,
+    TResult Function()? startAutoValidate,
+    TResult Function()? switchUserType,
+    required TResult orElse(),
+  }) {
+    if (switchUserType != null) {
+      return switchUserType();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(EmailChanged value) emailChanged,
+    required TResult Function(PasswordChanged value) passwordChanged,
+    required TResult Function(RegisterWithEmailAndPasswordPressed value)
+        registerWithEmailAndPasswordPressed,
+    required TResult Function(SignInWithEmailAndPasswordPressed value)
+        signInWithEmailAndPasswordPressed,
+    required TResult Function(SignInWithGooglePressed value)
+        signInWithGooglePressed,
+    required TResult Function(StartAutoValidate value) startAutoValidate,
+    required TResult Function(SwitchUserType value) switchUserType,
+  }) {
+    return switchUserType(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(EmailChanged value)? emailChanged,
+    TResult? Function(PasswordChanged value)? passwordChanged,
+    TResult? Function(RegisterWithEmailAndPasswordPressed value)?
+        registerWithEmailAndPasswordPressed,
+    TResult? Function(SignInWithEmailAndPasswordPressed value)?
+        signInWithEmailAndPasswordPressed,
+    TResult? Function(SignInWithGooglePressed value)? signInWithGooglePressed,
+    TResult? Function(StartAutoValidate value)? startAutoValidate,
+    TResult? Function(SwitchUserType value)? switchUserType,
+  }) {
+    return switchUserType?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(EmailChanged value)? emailChanged,
+    TResult Function(PasswordChanged value)? passwordChanged,
+    TResult Function(RegisterWithEmailAndPasswordPressed value)?
+        registerWithEmailAndPasswordPressed,
+    TResult Function(SignInWithEmailAndPasswordPressed value)?
+        signInWithEmailAndPasswordPressed,
+    TResult Function(SignInWithGooglePressed value)? signInWithGooglePressed,
+    TResult Function(StartAutoValidate value)? startAutoValidate,
+    TResult Function(SwitchUserType value)? switchUserType,
+    required TResult orElse(),
+  }) {
+    if (switchUserType != null) {
+      return switchUserType(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class SwitchUserType implements LoginEvent {
+  const factory SwitchUserType() = _$SwitchUserTypeImpl;
+}
+
+/// @nodoc
 mixin _$LoginState {
   String get email => throw _privateConstructorUsedError;
   String get password => throw _privateConstructorUsedError;
@@ -1043,7 +1232,7 @@ mixin _$LoginState {
   bool get isSubmitting => throw _privateConstructorUsedError;
   bool get waitingForGoogle => throw _privateConstructorUsedError;
   bool get isNewUser => throw _privateConstructorUsedError;
-  Either<AuthFailure, Unit>? get authFailureOrSuccessOption =>
+  Either<AuthFailure, Unit>? get authFailureOrSuccess =>
       throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -1064,7 +1253,7 @@ abstract class $LoginStateCopyWith<$Res> {
       bool isSubmitting,
       bool waitingForGoogle,
       bool isNewUser,
-      Either<AuthFailure, Unit>? authFailureOrSuccessOption});
+      Either<AuthFailure, Unit>? authFailureOrSuccess});
 }
 
 /// @nodoc
@@ -1086,7 +1275,7 @@ class _$LoginStateCopyWithImpl<$Res, $Val extends LoginState>
     Object? isSubmitting = null,
     Object? waitingForGoogle = null,
     Object? isNewUser = null,
-    Object? authFailureOrSuccessOption = freezed,
+    Object? authFailureOrSuccess = freezed,
   }) {
     return _then(_value.copyWith(
       email: null == email
@@ -1113,9 +1302,9 @@ class _$LoginStateCopyWithImpl<$Res, $Val extends LoginState>
           ? _value.isNewUser
           : isNewUser // ignore: cast_nullable_to_non_nullable
               as bool,
-      authFailureOrSuccessOption: freezed == authFailureOrSuccessOption
-          ? _value.authFailureOrSuccessOption
-          : authFailureOrSuccessOption // ignore: cast_nullable_to_non_nullable
+      authFailureOrSuccess: freezed == authFailureOrSuccess
+          ? _value.authFailureOrSuccess
+          : authFailureOrSuccess // ignore: cast_nullable_to_non_nullable
               as Either<AuthFailure, Unit>?,
     ) as $Val);
   }
@@ -1136,7 +1325,7 @@ abstract class _$$LoginStateImplCopyWith<$Res>
       bool isSubmitting,
       bool waitingForGoogle,
       bool isNewUser,
-      Either<AuthFailure, Unit>? authFailureOrSuccessOption});
+      Either<AuthFailure, Unit>? authFailureOrSuccess});
 }
 
 /// @nodoc
@@ -1156,7 +1345,7 @@ class __$$LoginStateImplCopyWithImpl<$Res>
     Object? isSubmitting = null,
     Object? waitingForGoogle = null,
     Object? isNewUser = null,
-    Object? authFailureOrSuccessOption = freezed,
+    Object? authFailureOrSuccess = freezed,
   }) {
     return _then(_$LoginStateImpl(
       email: null == email
@@ -1183,9 +1372,9 @@ class __$$LoginStateImplCopyWithImpl<$Res>
           ? _value.isNewUser
           : isNewUser // ignore: cast_nullable_to_non_nullable
               as bool,
-      authFailureOrSuccessOption: freezed == authFailureOrSuccessOption
-          ? _value.authFailureOrSuccessOption
-          : authFailureOrSuccessOption // ignore: cast_nullable_to_non_nullable
+      authFailureOrSuccess: freezed == authFailureOrSuccess
+          ? _value.authFailureOrSuccess
+          : authFailureOrSuccess // ignore: cast_nullable_to_non_nullable
               as Either<AuthFailure, Unit>?,
     ));
   }
@@ -1201,7 +1390,7 @@ class _$LoginStateImpl with DiagnosticableTreeMixin implements _LoginState {
       required this.isSubmitting,
       required this.waitingForGoogle,
       required this.isNewUser,
-      required this.authFailureOrSuccessOption});
+      required this.authFailureOrSuccess});
 
   @override
   final String email;
@@ -1216,11 +1405,11 @@ class _$LoginStateImpl with DiagnosticableTreeMixin implements _LoginState {
   @override
   final bool isNewUser;
   @override
-  final Either<AuthFailure, Unit>? authFailureOrSuccessOption;
+  final Either<AuthFailure, Unit>? authFailureOrSuccess;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'LoginState(email: $email, password: $password, showValidationMessages: $showValidationMessages, isSubmitting: $isSubmitting, waitingForGoogle: $waitingForGoogle, isNewUser: $isNewUser, authFailureOrSuccessOption: $authFailureOrSuccessOption)';
+    return 'LoginState(email: $email, password: $password, showValidationMessages: $showValidationMessages, isSubmitting: $isSubmitting, waitingForGoogle: $waitingForGoogle, isNewUser: $isNewUser, authFailureOrSuccess: $authFailureOrSuccess)';
   }
 
   @override
@@ -1235,8 +1424,7 @@ class _$LoginStateImpl with DiagnosticableTreeMixin implements _LoginState {
       ..add(DiagnosticsProperty('isSubmitting', isSubmitting))
       ..add(DiagnosticsProperty('waitingForGoogle', waitingForGoogle))
       ..add(DiagnosticsProperty('isNewUser', isNewUser))
-      ..add(DiagnosticsProperty(
-          'authFailureOrSuccessOption', authFailureOrSuccessOption));
+      ..add(DiagnosticsProperty('authFailureOrSuccess', authFailureOrSuccess));
   }
 
   @override
@@ -1255,10 +1443,8 @@ class _$LoginStateImpl with DiagnosticableTreeMixin implements _LoginState {
                 other.waitingForGoogle == waitingForGoogle) &&
             (identical(other.isNewUser, isNewUser) ||
                 other.isNewUser == isNewUser) &&
-            (identical(other.authFailureOrSuccessOption,
-                    authFailureOrSuccessOption) ||
-                other.authFailureOrSuccessOption ==
-                    authFailureOrSuccessOption));
+            (identical(other.authFailureOrSuccess, authFailureOrSuccess) ||
+                other.authFailureOrSuccess == authFailureOrSuccess));
   }
 
   @override
@@ -1270,7 +1456,7 @@ class _$LoginStateImpl with DiagnosticableTreeMixin implements _LoginState {
       isSubmitting,
       waitingForGoogle,
       isNewUser,
-      authFailureOrSuccessOption);
+      authFailureOrSuccess);
 
   @JsonKey(ignore: true)
   @override
@@ -1281,14 +1467,14 @@ class _$LoginStateImpl with DiagnosticableTreeMixin implements _LoginState {
 
 abstract class _LoginState implements LoginState {
   const factory _LoginState(
-      {required final String email,
-      required final String password,
-      required final bool showValidationMessages,
-      required final bool isSubmitting,
-      required final bool waitingForGoogle,
-      required final bool isNewUser,
-      required final Either<AuthFailure, Unit>?
-          authFailureOrSuccessOption}) = _$LoginStateImpl;
+          {required final String email,
+          required final String password,
+          required final bool showValidationMessages,
+          required final bool isSubmitting,
+          required final bool waitingForGoogle,
+          required final bool isNewUser,
+          required final Either<AuthFailure, Unit>? authFailureOrSuccess}) =
+      _$LoginStateImpl;
 
   @override
   String get email;
@@ -1303,7 +1489,7 @@ abstract class _LoginState implements LoginState {
   @override
   bool get isNewUser;
   @override
-  Either<AuthFailure, Unit>? get authFailureOrSuccessOption;
+  Either<AuthFailure, Unit>? get authFailureOrSuccess;
   @override
   @JsonKey(ignore: true)
   _$$LoginStateImplCopyWith<_$LoginStateImpl> get copyWith =>

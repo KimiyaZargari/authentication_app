@@ -8,10 +8,11 @@ import 'package:authentication_app/domain/auth/i_auth_repository.dart';
 import 'package:injectable/injectable.dart';
 
 
-@lazySingleton
+@LazySingleton(as: IAuthRepository)
 class AuthRepository implements IAuthRepository {
   final FirebaseAuth _firebaseAuth;
   final GoogleSignIn _googleSignIn;
+
 
   AuthRepository(
     this._firebaseAuth,

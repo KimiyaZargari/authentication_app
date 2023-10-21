@@ -3,13 +3,19 @@ part of 'login_bloc.dart';
 @freezed
 abstract class LoginEvent with _$LoginEvent {
   const factory LoginEvent.emailChanged(String emailStr) = EmailChanged;
+
   const factory LoginEvent.passwordChanged(String passwordStr) =
-  PasswordChanged;
+      PasswordChanged;
+
   const factory LoginEvent.registerWithEmailAndPasswordPressed() =
-  RegisterWithEmailAndPasswordPressed;
+      RegisterWithEmailAndPasswordPressed;
+
   const factory LoginEvent.signInWithEmailAndPasswordPressed() =
-  SignInWithEmailAndPasswordPressed;
-  const factory LoginEvent.signInWithGooglePressed() =
-  SignInWithGooglePressed;  const factory LoginEvent.startAutoValidate() =
-  StartAutoValidate;
+      SignInWithEmailAndPasswordPressed;
+
+  const factory LoginEvent.signInWithGooglePressed() = SignInWithGooglePressed;
+
+  const factory LoginEvent.startAutoValidate() = StartAutoValidate;
+
+  const factory LoginEvent.switchUserType() = SwitchUserType;
 }

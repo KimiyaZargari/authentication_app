@@ -9,7 +9,7 @@ class LoginState with _$LoginState {
     required bool isSubmitting,
     required bool waitingForGoogle,
     required bool isNewUser,
-    required Either<AuthFailure, Unit>? authFailureOrSuccessOption,
+    required Either<AuthFailure, Unit>? authFailureOrSuccess,
   }) = _LoginState;
 
   factory LoginState.initial() => const LoginState(
@@ -19,5 +19,5 @@ class LoginState with _$LoginState {
       isSubmitting: false,
       waitingForGoogle: false,
       isNewUser: false,
-      authFailureOrSuccessOption: null);
+      authFailureOrSuccess: null);
 }

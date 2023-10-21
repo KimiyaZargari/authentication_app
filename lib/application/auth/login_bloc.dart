@@ -17,10 +17,10 @@ part 'login_state.dart';
 part 'login_bloc.freezed.dart';
 
 @injectable
-class SignInFormBloc extends Bloc<LoginEvent, LoginState> {
+class LoginBloc extends Bloc<LoginEvent, LoginState> {
   final IAuthRepository repository;
 
-  SignInFormBloc(this.repository) : super(LoginState.initial()) {
+  LoginBloc(this.repository) : super(LoginState.initial()) {
     on<LoginEvent>(mapEventToState);
   }
 
@@ -29,13 +29,13 @@ class SignInFormBloc extends Bloc<LoginEvent, LoginState> {
       emailChanged: (e) {
         return state.copyWith(
           email: e.emailStr,
-          authFailureOrSuccessOption: null,
+          authFailureOrSuccess: null,
         );
       },
       passwordChanged: (e) {
         return state.copyWith(
           password: e.passwordStr,
-          authFailureOrSuccessOption: null,
+          authFailureOrSuccess: null,
         );
       },
       registerWithEmailAndPasswordPressed: (e) async {
@@ -49,16 +49,19 @@ class SignInFormBloc extends Bloc<LoginEvent, LoginState> {
       signInWithGooglePressed: (e) async {
         emit(state.copyWith(
           waitingForGoogle: true,
-          authFailureOrSuccessOption: null,
+          authFailureOrSuccess: null,
         ));
         final failureOrSuccess = await repository.signInWithGoogle();
         return state.copyWith(
           waitingForGoogle: false,
-          authFailureOrSuccessOption: failureOrSuccess,
+          authFailureOrSuccess: failureOrSuccess,
         );
       },
       startAutoValidate: (StartAutoValidate value) {
         return state.copyWith(showValidationMessages: true);
+      },
+      switchUserType: (SwitchUserType value) {
+        return state.copyWith(isNewUser: !state.isNewUser);
       },
     );
     emit(newState);
@@ -66,13 +69,13 @@ class SignInFormBloc extends Bloc<LoginEvent, LoginState> {
 
   Future<LoginState> _performActionOnAuthFacadeWithEmailAndPassword(
       Future<Either<AuthFailure, Unit>> Function(Credentials credentials)
-          forwardedCall,
+      forwardedCall,
       Emitter<LoginState> emit) async {
     Either<AuthFailure, Unit> failureOrSuccess;
 
     emit(state.copyWith(
       isSubmitting: true,
-      authFailureOrSuccessOption: null,
+      authFailureOrSuccess: null,
     ));
 
     failureOrSuccess = await forwardedCall(
@@ -80,7 +83,7 @@ class SignInFormBloc extends Bloc<LoginEvent, LoginState> {
 
     return state.copyWith(
       isSubmitting: false,
-      authFailureOrSuccessOption: failureOrSuccess,
+      authFailureOrSuccess: failureOrSuccess,
     );
   }
 }
