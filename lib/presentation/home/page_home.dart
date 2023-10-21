@@ -44,7 +44,7 @@ class HomePage extends StatelessWidget {
                         context.read<HomeBloc>().add(OnLogoutPressed());
                       },
                       child: state is LoggingOut
-                          ? LoadingWidget()
+                          ? LoadingWidget(color: Colors.white,)
                           : Text('Logout!'));
                 },
               ),
