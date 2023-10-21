@@ -20,15 +20,15 @@ class AuthRepository implements IAuthRepository {
   );
 
   @override
-  Future<String?> getSignedInUser() async => _firebaseAuth.currentUser?.uid;
+  Future<String?> getSignedInUser() async => _firebaseAuth.currentUser?.email;
 
   @override
-  Future<Either<AuthFailure, Unit>> registerWithEmailAndPassword(
+  Future<Either<AuthFailure, String>> registerWithEmailAndPassword(
       Credentials credentials) async {
     try {
-      await _firebaseAuth.createUserWithEmailAndPassword(
+     final cred =  await _firebaseAuth.createUserWithEmailAndPassword(
           email: credentials.email, password: credentials.password);
-      return right(unit);
+      return right(cred.user!.email!);
     } on FirebaseAuthException catch (e) {
       if (e.code == 'email-already-in-use') {
         return left(const AuthFailure.emailAlreadyInUse());
@@ -39,12 +39,12 @@ class AuthRepository implements IAuthRepository {
   }
 
   @override
-  Future<Either<AuthFailure, Unit>> signInWithEmailAndPassword(
+  Future<Either<AuthFailure, String>> signInWithEmailAndPassword(
       Credentials credentials) async {
     try {
-      await _firebaseAuth.signInWithEmailAndPassword(
+    final cred =   await _firebaseAuth.signInWithEmailAndPassword(
           email: credentials.email, password: credentials.password);
-      return right(unit);
+      return right(cred.user!.email!);
     } on FirebaseAuthException catch (e) {
       if (e.code == 'INVALID_LOGIN_CREDENTIALS') {
         return left(const AuthFailure.invalidEmailAndPasswordCombination());
@@ -55,7 +55,7 @@ class AuthRepository implements IAuthRepository {
   }
 
   @override
-  Future<Either<AuthFailure, Unit>> signInWithGoogle() async {
+  Future<Either<AuthFailure, String>> signInWithGoogle() async {
     try {
       final user = await _googleSignIn.signIn();
       if (user == null) {
@@ -69,8 +69,8 @@ class AuthRepository implements IAuthRepository {
         accessToken: googleAuthentication.accessToken,
       );
 
-      await _firebaseAuth.signInWithCredential(authCredential);
-      return right(unit);
+    final cred =   await _firebaseAuth.signInWithCredential(authCredential);
+      return right(cred.user!.email!);
     } on FirebaseAuthException catch (_) {
       return left(const AuthFailure.serverError());
     }

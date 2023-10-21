@@ -9,11 +9,12 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:authentication_app/application/auth/login_bloc.dart' as _i7;
+import 'package:authentication_app/application/home/home_bloc.dart' as _i8;
 import 'package:authentication_app/domain/auth/i_auth_repository.dart' as _i5;
 import 'package:authentication_app/infrastructure/auth/auth_repository.dart'
     as _i6;
 import 'package:authentication_app/infrastructure/core/firebase_injectable_module.dart'
-    as _i8;
+    as _i9;
 import 'package:firebase_auth/firebase_auth.dart' as _i3;
 import 'package:get_it/get_it.dart' as _i1;
 import 'package:google_sign_in/google_sign_in.dart' as _i4;
@@ -40,8 +41,9 @@ extension GetItInjectableX on _i1.GetIt {
           gh<_i4.GoogleSignIn>(),
         ));
     gh.factory<_i7.LoginBloc>(() => _i7.LoginBloc(gh<_i5.IAuthRepository>()));
+    gh.factory<_i8.HomeBloc>(() => _i8.HomeBloc(gh<_i5.IAuthRepository>()));
     return this;
   }
 }
 
-class _$FirebaseInjectableModule extends _i8.FirebaseInjectableModule {}
+class _$FirebaseInjectableModule extends _i9.FirebaseInjectableModule {}

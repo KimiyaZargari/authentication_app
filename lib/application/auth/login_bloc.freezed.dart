@@ -1232,7 +1232,7 @@ mixin _$LoginState {
   bool get isSubmitting => throw _privateConstructorUsedError;
   bool get waitingForGoogle => throw _privateConstructorUsedError;
   bool get isNewUser => throw _privateConstructorUsedError;
-  Either<AuthFailure, Unit>? get authFailureOrSuccess =>
+  Either<AuthFailure, String>? get authFailureOrSuccess =>
       throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -1253,7 +1253,7 @@ abstract class $LoginStateCopyWith<$Res> {
       bool isSubmitting,
       bool waitingForGoogle,
       bool isNewUser,
-      Either<AuthFailure, Unit>? authFailureOrSuccess});
+      Either<AuthFailure, String>? authFailureOrSuccess});
 }
 
 /// @nodoc
@@ -1305,7 +1305,7 @@ class _$LoginStateCopyWithImpl<$Res, $Val extends LoginState>
       authFailureOrSuccess: freezed == authFailureOrSuccess
           ? _value.authFailureOrSuccess
           : authFailureOrSuccess // ignore: cast_nullable_to_non_nullable
-              as Either<AuthFailure, Unit>?,
+              as Either<AuthFailure, String>?,
     ) as $Val);
   }
 }
@@ -1325,7 +1325,7 @@ abstract class _$$LoginStateImplCopyWith<$Res>
       bool isSubmitting,
       bool waitingForGoogle,
       bool isNewUser,
-      Either<AuthFailure, Unit>? authFailureOrSuccess});
+      Either<AuthFailure, String>? authFailureOrSuccess});
 }
 
 /// @nodoc
@@ -1375,7 +1375,7 @@ class __$$LoginStateImplCopyWithImpl<$Res>
       authFailureOrSuccess: freezed == authFailureOrSuccess
           ? _value.authFailureOrSuccess
           : authFailureOrSuccess // ignore: cast_nullable_to_non_nullable
-              as Either<AuthFailure, Unit>?,
+              as Either<AuthFailure, String>?,
     ));
   }
 }
@@ -1405,7 +1405,7 @@ class _$LoginStateImpl with DiagnosticableTreeMixin implements _LoginState {
   @override
   final bool isNewUser;
   @override
-  final Either<AuthFailure, Unit>? authFailureOrSuccess;
+  final Either<AuthFailure, String>? authFailureOrSuccess;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
@@ -1473,7 +1473,7 @@ abstract class _LoginState implements LoginState {
           required final bool isSubmitting,
           required final bool waitingForGoogle,
           required final bool isNewUser,
-          required final Either<AuthFailure, Unit>? authFailureOrSuccess}) =
+          required final Either<AuthFailure, String>? authFailureOrSuccess}) =
       _$LoginStateImpl;
 
   @override
@@ -1489,7 +1489,7 @@ abstract class _LoginState implements LoginState {
   @override
   bool get isNewUser;
   @override
-  Either<AuthFailure, Unit>? get authFailureOrSuccess;
+  Either<AuthFailure, String>? get authFailureOrSuccess;
   @override
   @JsonKey(ignore: true)
   _$$LoginStateImplCopyWith<_$LoginStateImpl> get copyWith =>

@@ -1,5 +1,6 @@
 import 'package:authentication_app/application/auth/login_bloc.dart';
 import 'package:authentication_app/injection.dart';
+import 'package:authentication_app/presentation/routes/router.gr.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -31,7 +32,9 @@ class LoginPage extends StatelessWidget {
               },
             );
           },
-          (_) {},
+          (email) {
+            context.router.replace(HomeRoute(email: email));
+          },
         );
       }, builder: (context, state) {
         return PageBase(

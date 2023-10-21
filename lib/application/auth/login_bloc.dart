@@ -68,10 +68,10 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
   }
 
   Future<LoginState> _performActionOnAuthFacadeWithEmailAndPassword(
-      Future<Either<AuthFailure, Unit>> Function(Credentials credentials)
+      Future<Either<AuthFailure, String>> Function(Credentials credentials)
       forwardedCall,
       Emitter<LoginState> emit) async {
-    Either<AuthFailure, Unit> failureOrSuccess;
+    Either<AuthFailure, String> failureOrSuccess;
 
     emit(state.copyWith(
       isSubmitting: true,
